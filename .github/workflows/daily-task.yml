@@ -6,7 +6,7 @@ on:
   push: # push触发
     branches: [ main ]
   workflow_dispatch: # 手动触发
-  schedule: # 计划任务触发
+#  schedule: # 计划任务触发
     #- cron: '*/30 20-23,0-15 * * *' # cron表达式，Actions时区是UTC时间，所以要往前推8个小时(4-23)
    # - cron: '30 * * * *'
     
@@ -76,7 +76,7 @@ jobs:
     - name: Run unicom daily task
       
       env:
-        user: ${{secrets.unicom_user}}
+        user: ${{secrets.unicom_user1}}
         password: ${{secrets.unicom_password}}
         appid: ${{secrets.unicom_appid}}
       run: node index.js unicom --accountSn=1 --user-1=${user} --password-1=${password} --appid-1=${appid} --tryrun
