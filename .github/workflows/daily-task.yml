@@ -8,7 +8,7 @@ on:
   workflow_dispatch: # 手动触发
   schedule: # 计划任务触发
     #- cron: '*/30 20-23,0-15 * * *' # cron表达式，Actions时区是UTC时间，所以要往前推8个小时(4-23)
-    - cron: '30 * * * *'
+   # - cron: '30 * * * *'
     
 
 jobs:
@@ -78,7 +78,6 @@ jobs:
       env:
         user: ${{secrets.unicom_user}}
         password: ${{secrets.unicom_password}}
-        user2: ${{secrets.unicom_user2}}
-        password2: ${{secrets.unicom_password2}}
         appid: ${{secrets.unicom_appid}}
-      run: node index.js unicom --accountSn=1,2 --user-1=${user} --password-1=${password} --appid-1=${appid} --user-2=${user2} --password-2=${password2} --appid-2=${appid} --tryrun
+      run: node index.js unicom --accountSn=1 --user-1=${user} --password-1=${password} --appid-1=${appid} --tryrun
+
