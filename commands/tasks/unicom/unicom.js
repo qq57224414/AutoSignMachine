@@ -202,9 +202,10 @@ var start = async (params) => {
   }, taskOption)
 
   // 首页-游戏-娱乐中心-天天领取3G流量包
-  await scheduler.regTask('dailygameflow', async (request) => {
-    await require('./producGame').doGameFlowTask(request, options)
-  }, taskOption)
+  // 触发防刷
+  //await scheduler.regTask('dailygameflow', async (request) => {
+  //  await require('./producGame').doGameFlowTask(request, options)
+  //}, taskOption)
 
   // 首页-积分查询-游戏任务
   await scheduler.regTask('dailygameIntegral', async (request) => {
@@ -384,7 +385,7 @@ var start = async (params) => {
 
   // 每日0点自动兑换流量
 //  await scheduler.regTask('exchangeDFlow', async (request) => {
-//    await require('./exchangeDFlow').doTask(request, options)
+//    await require('./exchangeDFlow').doTask(request, options)https://github.com/WuYehow/AutoSignMachine-1/blob/master/commands/tasks/unicom/unicom.js
 //  }, {
 //    ...taskOption,
 //    startTime: 0,
