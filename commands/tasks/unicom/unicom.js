@@ -101,13 +101,13 @@ var start = async (params) => {
   }, taskOption)
 
   // 首页-签到有礼-免费领-1G流量日包
-  await scheduler.regTask('daily1GFlowTask', async (request) => {
-    await require('./daily1GFlowTask').doTask(request, options)
-  }, {
-    ...taskOption,
-    startTime: 20 * 3600,
-    ignoreRelay: true
-  })
+  //await scheduler.regTask('daily1GFlowTask', async (request) => {
+  //  await require('./daily1GFlowTask').doTask(request, options)
+  //}, {
+  //  ...taskOption,
+  //  startTime: 20 * 3600,
+  //  ignoreRelay: true
+  //})
 
   // 首页-签到有礼-免费领-浏览领积分
   await scheduler.regTask('dailyLiuLan', async (request) => {
