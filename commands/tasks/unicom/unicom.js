@@ -79,8 +79,8 @@ var start = async (params) => {
   //   ignoreRelay: true
   // })
 
-  // 首页-小说-读满10章赢好礼
-  //await scheduler.regTask('', async (request) => {
+  // 首页-小说-读满赢好礼
+  //await scheduler.regTask('dailyBookRead10doDraw', async (request) => {
     // 首页-小说-读满10章赢好礼
   //  await require('./dailyVideoBook').read10doDraw(request, options)
     // 首页-签到有礼-免流量得福利-3积分天天拿(阅读打卡) 已下线
