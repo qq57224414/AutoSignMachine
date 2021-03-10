@@ -333,9 +333,9 @@ var start = async (params) => {
 
 
   // 我的钱包-沃钱包-幸运抽大奖
-  await scheduler.regTask('dailystw', async (request) => {
-    await require('./dailystw').doTask(request, options)
-  }, taskOption)
+  //await scheduler.regTask('dailystw', async (request) => {
+  //  await require('./dailystw').doTask(request, options)
+  //}, taskOption)
 
 
   // 沃钱包-联通支付日-转盘抽奖
