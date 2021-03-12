@@ -4,7 +4,7 @@ on:
   workflow_dispatch: # 手动触发
   schedule: # 计划任务触发
 #    - cron: '*/30 20-23,0-16 * * *' # cron表达式，Actions时区是UTC时间，所以要往前推8个小时(4-23)
-    - cron: '0 16,0,12 * * *' # 在北京时间 0,8,18点运行
+    - cron: '0 0,12 * * *' # 在北京时间 8,18点运行
 
 jobs:
   daily-task:
